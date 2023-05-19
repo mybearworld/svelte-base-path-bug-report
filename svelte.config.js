@@ -1,19 +1,19 @@
-import adapter from "@sveltejs/adapter-static";
+import adapter from '@sveltejs/adapter-static';
 
-const dev = process.argv.includes("dev");
+const dev = process.argv.includes('dev');
 
 const config = {
   kit: {
     adapter: adapter({
-      pages: "build",
-      assets: "build",
+      pages: 'build',
+      assets: 'build',
       fallback: undefined,
       precompress: false,
       strict: true,
     }),
-    paths: {
-      base: dev ? "" : "/svelte-base-path-bug-report",
-    },
+    // paths: {
+    //   base: dev ? "" : "/svelte-base-path-bug-report",
+    // },
   },
 };
 
